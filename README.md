@@ -1,4 +1,4 @@
-# 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
+<img width="140" height="162" alt="image" src="https://github.com/user-attachments/assets/551d5302-8345-4add-acb1-fd6ff2b36789" /># 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
 # IAPR-2- Module 2 - FoC
 ## 3. Implementation of programs using conditional statements.
 ## 4. Implementation of programs using various control statements.
@@ -56,9 +56,59 @@
 ### Step 11:
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    float math, science, english, average;
+
+    printf("Enter marks in Math: ");
+    scanf("%f", &math);
+
+    printf("Enter marks in Science: ");
+    scanf("%f", &science);
+
+    printf("Enter marks in English: ");
+    scanf("%f", &english);
+
+    average = (math + science + english) / 3.0;
+
+    printf("\nAverage Marks = %.2f\n", average);
+
+    if (average >= 90.0)
+    {
+        printf("Grade = A\n");
+    }
+    else
+    {
+        if (average >= 75.0)
+        {
+            printf("Grade = B\n");
+        }
+        else
+        {
+            if (average >= 50.0)
+            {
+                printf("Grade = C\n");
+            }
+            else
+            {
+                printf("Grade = F\n");
+            }
+        }
+    }
+
+    return 0;
+}
+```
 # Output:
+<img width="302" height="186" alt="image" src="https://github.com/user-attachments/assets/5ca3af48-b7aa-48e5-b25e-cebd9abf7cbd" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
+
+
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
 # IAPR-2- Module 2 - FoC
@@ -88,9 +138,31 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    int num = 15, i;
+
+    printf("Multiplication Table of %d\n\n", num);
+
+    for(i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", num, i, num * i);
+    }
+
+    return 0;
+}
+```
 # Output:
+<img width="305" height="352" alt="image" src="https://github.com/user-attachments/assets/518ba4b5-f55b-44fa-aaeb-b6bba5825d21" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
+
+
+
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
 # IAPR-2- Module 2 - FoC
@@ -131,9 +203,47 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    int num, i, isPrime = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num <= 1)
+    {
+        isPrime = 0;
+    }
+    else
+    {
+        for (i = 2; i <= num / 2; i++)
+        {
+            if (num % i == 0)
+            {
+                isPrime = 0;
+                break;
+            }
+        }
+    }
+
+    if (isPrime)
+        printf("%d is a Prime Number.\n", num);
+    else
+        printf("%d is not a Prime Number.\n", num);
+
+    return 0;
+}
+```
 # Output:
+<img width="278" height="70" alt="image" src="https://github.com/user-attachments/assets/93a2679a-589b-4eda-8637-7283680a283b" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
+
+
 
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
@@ -179,9 +289,43 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    int i, j, n = 5;
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j = 1; j <= n; j++)
+        {
+            if(i == 1)
+                printf("%d", j);
+            else if(i == n)
+                printf("%d", n - j + 1);
+            else if(j == 1)
+                printf("%d", i);
+            else if(j == n)
+                printf("%d", n - i + 1);
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
 # Output:
+<img width="140" height="162" alt="image" src="https://github.com/user-attachments/assets/a372b608-b736-4bd0-8aaa-94e31cea14f5" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
+
+
+  
 
   
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd-M2
@@ -232,6 +376,36 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+# Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    printf("0\n\n");
+
+    for(i = 7; i >= 1; i--)
+    {
+        for(j = i; j <= 7; j++)
+            printf("%d ", j);
+
+        printf("0 ");
+
+        for(j = 7; j >= i; j--)
+            printf("%d ", j);
+
+        printf("\n\n");
+    }
+
+    return 0;
+}
+```
+
+# Output:
+<img width="460" height="512" alt="image" src="https://github.com/user-attachments/assets/81320b26-678e-4dad-986d-30bb7dbf41a4" />
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
